@@ -1,0 +1,56 @@
+{
+  "name": "@jairemix/capacitor-notification-permission",
+  "private": true,
+  "version": "0.0.1",
+  "description": "capacitor plugin that allows for querying whether notifications are enabled before scheduling them with the default capacitor LocalNotification plugin",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "clean": "rm -rf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "yarn build",
+    "release": "yarn publish --access public"
+  },
+  "author": "Jeremy Li",
+  "license": "MIT",
+  "dependencies": {
+    "@capacitor/core": "latest"
+  },
+  "devDependencies": {
+    "typescript": "^3.2.4",
+    "@capacitor/ios": "latest",
+    "@capacitor/android": "latest"
+  },
+  "files": [
+    "dist/",
+    "ios/Plugin",
+    "ios/Plugin.xcodeproj",
+    "ios/Plugin.xcworkspace",
+    "ios/PluginTests",
+    "ios/Podfile",
+    "ios/Podfile.lock",
+    "android/",
+    "JairemixCapacitorNotificationPermission.podspec"
+  ],
+  "keywords": [
+    "capacitor",
+    "plugin",
+    "native"
+  ],
+  "capacitor": {
+    "ios": {
+      "src": "ios"
+    },
+    "android": {
+      "src": "android"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jairemix/capacitor-notification-permission"
+  },
+  "bugs": {
+    "url": "https://github.com/jairemix/capacitor-notification-permission/issues"
+  }
+}
