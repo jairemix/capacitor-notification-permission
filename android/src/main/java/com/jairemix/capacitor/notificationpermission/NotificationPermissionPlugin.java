@@ -17,9 +17,9 @@ public class NotificationPermissionPlugin extends Plugin {
     private static final String PLUGIN_TAG = "NotificationPermission";
     
     @PluginMethod()
-    public void registerPermission(PluginCall call) {
+    public void checkPermission(PluginCall call) {
 
-        Log.d(PLUGIN_TAG, "registerPermission()");
+        Log.d(PLUGIN_TAG, "checkPermission()");
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.getContext());
         boolean granted = notificationManager.areNotificationsEnabled();
 

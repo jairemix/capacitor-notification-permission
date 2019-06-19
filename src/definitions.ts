@@ -16,8 +16,8 @@ export interface NotificationPermissionPlugin {
     "alertStyle": number,
   }>;
   /**
-   * on iOS: registers for permission (if not already registered) and returns whether it was granted
-   * on Android: just returns whether permission is granted. permissions are turned on by default
+   * on iOS: requests permission from user (if not requested previously) and returns whether it was granted.
+   * on Android: just returns whether permission is enabled. permissions are turned on by default until the user disables them in settings.
    */
-  registerPermission(): Promise<{ granted: boolean }>;
+  checkPermission(): Promise<{ granted: boolean }>;
 }

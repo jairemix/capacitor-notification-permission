@@ -22,7 +22,7 @@ public class NotificationPermissionPlugin: CAPPlugin {
       });
     }
     
-    @objc func registerPermission(_ call: CAPPluginCall) {
+    @objc func checkPermission(_ call: CAPPluginCall) {
       let center = UNUserNotificationCenter.current();
       center.requestAuthorization(options:[.badge, .alert, .sound], completionHandler: { (granted: Bool, error) in
         // Enable or disable features based on authorization.
