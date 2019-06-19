@@ -9,7 +9,7 @@ import UserNotifications
 @objc(NotificationPermissionPlugin)
 public class NotificationPermissionPlugin: CAPPlugin {
 
-    @objc func getSettings(_ call: CAPPluginCall) {
+    @objc func getIOSSettings(_ call: CAPPluginCall) {
       let center = UNUserNotificationCenter.current();
       center.getNotificationSettings(completionHandler: { (settings: UNNotificationSettings) in
         call.success([
