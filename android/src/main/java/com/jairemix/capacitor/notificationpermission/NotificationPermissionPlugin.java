@@ -21,9 +21,9 @@ public class NotificationPermissionPlugin extends Plugin {
 
         Log.d(PLUGIN_TAG, "registerPermission()");
         NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this.getContext());
-        boolean enabled = notificationManager.areNotificationsEnabled();
+        boolean granted = notificationManager.areNotificationsEnabled();
 
-        call.success(new JSObject().put("enabled", enabled));
+        call.success(new JSObject().put("granted", granted));
     }
 
 }
