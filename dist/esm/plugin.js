@@ -1,3 +1,3 @@
 import { Plugins } from '@capacitor/core';
-export const notificationPermission = Plugins.NotificationPermissionPlugin;
+export var notificationPermission = Plugins.NotificationPermissionPlugin;
 //# sourceMappingURL=plugin.js.map
